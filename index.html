@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Varel BioScience — jelajahi biologi, evolusi, genetika, tubuh manusia, dan keanekaragaman hayati dalam bahasa Indonesia.">
+  <meta name="theme-color" content="#07111b">
+  <title>Varel BioScience — Jelajahi Kehidupan</title>
+  <style>
+    :root{--bg:#07111b;--panel:#0d1b29;--panel2:#102334;--text:#edf7ff;--muted:#a5bbca;--cyan:#62e6d5;--blue:#67a9ff;--line:rgba(170,220,240,.14);--glow:0 0 35px rgba(98,230,213,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(23,105,130,.18),transparent 36%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}
+    a{color:inherit}img{display:block;max-width:100%}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,17,27,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.2px}.logo{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(98,230,213,.55);border-radius:12px;color:var(--cyan);font-size:22px;box-shadow:var(--glow)}.brand span em{font-style:normal;color:var(--cyan)}
+    nav{display:flex;gap:22px;flex-wrap:wrap}nav a{font-size:.9rem;text-decoration:none;color:var(--muted)}nav a:hover{color:var(--cyan)}
+    .hero{padding:76px 0 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}.eyebrow{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.06;letter-spacing:-2px;margin:16px 0}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);font-size:1.08rem;max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:750;border:1px solid var(--line)}.btn.primary{background:var(--cyan);color:#05202a;border-color:var(--cyan)}.btn.secondary:hover{border-color:var(--cyan)}.hero-visual{position:relative;border:1px solid var(--line);border-radius:24px;overflow:hidden;min-height:350px;box-shadow:var(--glow);background:#0a1a28}.hero-visual img{width:100%;height:390px;object-fit:cover;opacity:.82}.image-label{position:absolute;left:18px;right:18px;bottom:18px;padding:15px 17px;background:rgba(4,15,24,.82);border:1px solid var(--line);border-radius:15px;backdrop-filter:blur(10px)}.image-label strong{display:block}.image-label small{color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 65px}.stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(13,27,41,.7)}.stat strong{display:block;font-size:1.35rem;color:var(--cyan)}.stat span{font-size:.86rem;color:var(--muted)}
+    section{padding:34px 0 52px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}.section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;margin:7px 0}.section-head p{color:var(--muted);max-width:520px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:linear-gradient(155deg,rgba(16,35,52,.98),rgba(10,24,37,.98));transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-4px);border-color:rgba(98,230,213,.45)}.card img{width:100%;height:185px;object-fit:cover;background:#102334}.card-content{padding:19px}.tag{display:inline-block;padding:4px 9px;border-radius:99px;background:rgba(98,230,213,.1);color:var(--cyan);font-size:.74rem;font-weight:750}.card h3{margin:10px 0 7px;font-size:1.17rem}.card p{color:var(--muted);font-size:.93rem;margin:0 0 13px}.read{font-weight:750;color:var(--cyan);text-decoration:none;font-size:.9rem}
+    .factbox{display:grid;grid-template-columns:.75fr 1.25fr;gap:25px;align-items:center;background:linear-gradient(120deg,rgba(98,230,213,.09),rgba(103,169,255,.07));border:1px solid var(--line);border-radius:22px;padding:26px;margin-top:12px}.factbox .big{font-size:3.4rem;line-height:1;color:var(--cyan);font-weight:900}.factbox h3{margin:0 0 8px;font-size:1.35rem}.factbox p{color:var(--muted);margin:0}.fact-controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.mini-btn{border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text);padding:9px 12px;cursor:pointer;font:inherit}.mini-btn:hover{border-color:var(--cyan)}
+    .glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.term{padding:17px;border:1px solid var(--line);border-radius:14px;background:rgba(13,27,41,.65)}.term strong{color:var(--cyan)}.term p{margin:5px 0 0;color:var(--muted);font-size:.93rem}
+    .sources{padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(13,27,41,.55)}.sources p{color:var(--muted)}.sources a{color:var(--cyan);text-underline-offset:3px}
+    footer{border-top:1px solid var(--line);padding:26px 0 35px;color:var(--muted);font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-visual img{height:300px}.cards{grid-template-columns:repeat(2,1fr)}.factbox{grid-template-columns:1fr}.stats{margin-bottom:40px}nav{gap:12px}nav a{font-size:.82rem}}
+    @media(max-width:540px){.nav{align-items:flex-start;padding:13px 0;flex-direction:column}.hero h1{letter-spacing:-1px}.cards,.glossary{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.card img{height:205px}.hero-visual img{height:260px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Varel BioScience beranda"><span class="logo">⌬</span><span>Varel <em>BioScience</em></span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#jelajahi">Jelajahi</a><a href="#fakta">Fakta unik</a><a href="#kamus">Kamus biologi</a><a href="#referensi">Referensi</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">Biologi • Kehidupan • Penemuan</div>
+        <h1>Memahami kehidupan, <span>satu penemuan</span> demi satu.</h1>
+        <p>Selamat datang di Varel BioScience — ruang belajar biologi berbahasa Indonesia. Dari molekul terkecil hingga ekosistem luas, temukan bagaimana kehidupan bekerja melalui penjelasan ringkas, ilustrasi, dan fakta ilmiah.</p>
+        <div class="actions"><a class="btn primary" href="#jelajahi">Mulai menjelajah ↗</a><a class="btn secondary" href="#fakta">Temukan fakta unik</a></div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?auto=format&fit=crop&w=1200&q=85" alt="Ilustrasi visual laboratorium dan penelitian biologi" onerror="this.src='https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1200&q=85'">
+        <div class="image-label"><strong>Biologi adalah ilmu tentang kehidupan.</strong><small>Amati • Bertanya • Uji bukti • Pahami</small></div>
+      </div>
+    </section>
+    <div class="stats" aria-label="Topik utama">
+      <div class="stat"><strong>01 / Sel</strong><span>Unit dasar kehidupan</span></div>
+      <div class="stat"><strong>02 / Evolusi</strong><span>Perubahan populasi dari generasi ke generasi</span></div>
+      <div class="stat"><strong>03 / Ekologi</strong><span>Hubungan organisme dan lingkungannya</span></div>
+    </div>
+
+    <section id="jelajahi">
+      <div class="section-head"><div><div class="eyebrow">Peta pengetahuan</div><h2>Jelajahi dunia biologi</h2></div><p>Pilih topik yang membuatmu penasaran. Setiap bidang saling terhubung untuk menjelaskan kehidupan.</p></div>
+      <div class="cards">
+        <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=900&q=80" alt="Visual molekul DNA"><div class="card-content"><span class="tag">GENETIKA</span><h3>DNA dan kode kehidupan</h3><p>DNA menyimpan instruksi biologis yang membantu sel membangun dan menjalankan organisme. Gen adalah bagian DNA yang memiliki fungsi tertentu.</p><a class="read" href="https://medlineplus.gov/genetics/understanding/basics/dna/" target="_blank" rel="noopener">Pelajari DNA ↗</a></div></article>
+        <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=900&q=80" alt="Keanekaragaman kehidupan di alam"><div class="card-content"><span class="tag">EVOLUSI</span><h3>Evolusi dan seleksi alam</h3><p>Evolusi adalah perubahan sifat yang diwariskan dalam populasi dari generasi ke generasi. Seleksi alam merupakan salah satu mekanismenya.</p><a class="read" href="https://evolution.berkeley.edu/" target="_blank" rel="noopener">Jelajahi evolusi ↗</a></div></article>
+        <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=900&q=80" alt="Peralatan dan suasana laboratorium"><div class="card-content"><span class="tag">MIKROBIOLOGI</span><h3>Dunia yang tak terlihat</h3><p>Bakteri, arkea, jamur mikroskopis, dan organisme bersel satu memiliki peran besar dalam ekosistem, kesehatan, serta daur materi.</p><a class="read" href="https://microbenotes.com/" target="_blank" rel="noopener">Baca mikrobiologi ↗</a></div></article>
+        <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80" alt="Ilustrasi ilmu saraf dan otak"><div class="card-content"><span class="tag">TUBUH MANUSIA</span><h3>Otak dan sistem saraf</h3><p>Sistem saraf menerima informasi, memprosesnya, dan membantu tubuh merespons. Otak bekerja melalui jaringan neuron yang saling berkomunikasi.</p><a class="read" href="https://www.brainfacts.org/" target="_blank" rel="noopener">Jelajahi ilmu otak ↗</a></div></article>
+        <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80" alt="Satwa liar di habitat alami"><div class="card-content"><span class="tag">EKOLOGI</span><h3>Jaringan kehidupan</h3><p>Organisme saling berinteraksi dengan makhluk hidup lain dan faktor abiotik seperti air, tanah, suhu, serta cahaya.</p><a class="read" href="https://www.nationalgeographic.com/animals" target="_blank" rel="noopener">Lihat dunia satwa ↗</a></div></article>
+        <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Tanaman hijau yang tumbuh"><div class="card-content"><span class="tag">BOTANI</span><h3>Strategi hidup tumbuhan</h3><p>Melalui fotosintesis, tumbuhan menggunakan energi cahaya untuk membentuk senyawa organik dari karbon dioksida dan air.</p><a class="read" href="https://www.kew.org/science" target="_blank" rel="noopener">Jelajahi ilmu tumbuhan ↗</a></div></article>
+      </div>
+    </section>
+
+    <section id="fakta">
+      <div class="section-head"><div><div class="eyebrow">Bikin penasaran</div><h2>Fakta biologi singkat</h2></div><p>Tekan tombol untuk mendapatkan fakta berikutnya. Fakta ditulis ringkas agar mudah diingat.</p></div>
+      <div class="factbox">
+        <div><div class="eyebrow">FAKTA <span id="fact-num">01</span></div><div class="big" id="fact-symbol">DNA</div></div>
+        <div><h3 id="fact-title">Kamu berbagi banyak gen dengan makhluk hidup lain</h3><p id="fact-text">Semua kehidupan yang diketahui menggunakan DNA atau RNA dalam sistem biologinya, dan banyak mekanisme dasar sel diwariskan dari nenek moyang yang sangat jauh. Kemiripan tidak berarti semua organisme identik.</p><div class="fact-controls"><button class="mini-btn" id="next-fact" type="button">Fakta berikutnya →</button><button class="mini-btn" id="copy-fact" type="button">Salin fakta</button></div><p id="copy-status" aria-live="polite" style="font-size:.82rem;margin-top:8px"></p></div>
+      </div>
+    </section>
+
+    <section id="kamus">
+      <div class="section-head"><div><div class="eyebrow">Istilah penting</div><h2>Kamus biologi mini</h2></div><p>Kenali istilah dasar yang sering muncul dalam pembahasan biologi.</p></div>
+      <div class="glossary">
+        <div class="term"><strong>Sel</strong><p>Unit struktural dan fungsional dasar pada makhluk hidup.</p></div>
+        <div class="term"><strong>Gen</strong><p>Bagian DNA yang berkontribusi pada produk fungsional, seperti RNA atau protein.</p></div>
+        <div class="term"><strong>Ekosistem</strong><p>Komunitas organisme beserta lingkungan fisik yang berinteraksi dengannya.</p></div>
+        <div class="term"><strong>Homeostasis</strong><p>Proses menjaga kondisi internal organisme tetap berada dalam rentang yang sesuai.</p></div>
+        <div class="term"><strong>Adaptasi</strong><p>Sifat yang diwariskan dan dapat meningkatkan keberhasilan hidup atau reproduksi dalam lingkungan tertentu.</p></div>
+        <div class="term"><strong>Fotosintesis</strong><p>Proses mengubah energi cahaya menjadi energi kimia pada tumbuhan, alga, dan beberapa bakteri.</p></div>
+      </div>
+    </section>
+
+    <section id="referensi">
+      <div class="section-head"><div><div class="eyebrow">Belajar lebih jauh</div><h2>Referensi tepercaya</h2></div></div>
+      <div class="sources">
+        <p>Konten di situs ini merupakan pengantar edukasi, bukan pengganti buku ajar atau saran medis. Untuk membaca lebih mendalam, kunjungi sumber berikut:</p>
+        <ul>
+          <li><a href="https://evolution.berkeley.edu/" target="_blank" rel="noopener">Understanding Evolution — University of California, Berkeley</a></li>
+          <li><a href="https://medlineplus.gov/genetics/" target="_blank" rel="noopener">MedlinePlus Genetics — U.S. National Library of Medicine</a></li>
+          <li><a href="https://www.khanacademy.org/science/biology" target="_blank" rel="noopener">Khan Academy — Biology</a></li>
+          <li><a href="https://www.nationalgeographic.com/animals" target="_blank" rel="noopener">National Geographic — Animals</a></li>
+        </ul>
+        <p><strong>Catatan gambar:</strong> foto pada halaman ini dimuat dari Unsplash melalui internet. Jika foto tidak muncul, periksa koneksi atau ganti alamat gambar dengan gambar yang memiliki izin penggunaan yang sesuai.</p>
+      </div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Varel BioScience</span><span>Dibuat untuk rasa ingin tahu dan kecintaan pada sains. 🧬</span></div></footer>
+<script>
+  const facts = [
+    {symbol:"DNA",title:"DNA menyimpan informasi biologis",text:"Urutan basa pada DNA membantu menyimpan informasi yang digunakan sel. Namun, sifat organisme juga dipengaruhi lingkungan dan interaksi kompleks antar-gen."},
+    {symbol:"SEL",title:"Tidak semua sel punya inti",text:"Sel hewan dan tumbuhan memiliki inti sel, sedangkan bakteri dan arkea termasuk prokariota yang tidak memiliki inti bermembran."},
+    {symbol:"EVOLUSI",title:"Evolusi terjadi pada populasi",text:"Individu berkembang selama hidupnya, sedangkan evolusi dalam pengertian biologis adalah perubahan sifat yang diwariskan pada populasi lintas generasi."},
+    {symbol:"LAUT",title:"Laut membantu menopang kehidupan",text:"Fitoplankton dan organisme fotosintetik laut menyerap karbon dioksida serta menghasilkan banyak oksigen melalui fotosintesis."},
+    {symbol:"OTAK",title:"Otak terus memproses informasi",text:"Neuron berkomunikasi melalui sinyal listrik dan kimia. Jaringan saraf membantu kita belajar, mengingat, bergerak, dan merespons lingkungan."},
+    {symbol:"JAMUR",title:"Jamur bukan tumbuhan",text:"Jamur berada dalam kingdom tersendiri. Mereka memperoleh nutrisi dengan menyerap bahan organik dan berperan penting dalam penguraian."}
+  ];
+  let idx=0;
+  const $=id=>document.getElementById(id);
+  function showFact(){const f=facts[idx];$("fact-num").textContent=String(idx+1).padStart(2,"0");$("fact-symbol").textContent=f.symbol;$("fact-title").textContent=f.title;$("fact-text").textContent=f.text;$("copy-status").textContent="";}
+  $("next-fact").addEventListener("click",()=>{idx=(idx+1)%facts.length;showFact()});
+  $("copy-fact").addEventListener("click",async()=>{const f=facts[idx],txt=f.title+"\n"+f.text;try{await navigator.clipboard.writeText(txt);$("copy-status").textContent="Fakta berhasil disalin."}catch(e){$("copy-status").textContent="Pilih dan salin teks fakta secara manual."}});
+  $("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
